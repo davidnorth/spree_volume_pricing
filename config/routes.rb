@@ -1,8 +1,8 @@
-Rails.application.routes.draw do
+Spree::Core::Engine.routes.append do
 
-  namespace :admin do 
+  namespace :admin do
 
-    resources :products do 
+    resources :products do
        resources :variants do
         get :volume_prices, :on => :member
       end
